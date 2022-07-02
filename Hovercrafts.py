@@ -1,4 +1,4 @@
-# Variable set to values required for passing assignment
+# Variables set to values required for passing assignment
 qty_manufactured = 10
 cost = 2000000
 retail_price = 3000000
