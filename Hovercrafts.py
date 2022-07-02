@@ -1,19 +1,43 @@
-# Define variables for the following items...
-    # QtyManufactured (Per Month, Capped at 10) 
-    # Sales (how many customer orders received for the month)
-    # Cost (to manufacture a single hovercraft, Set to $2,000,000.00)
-    # RetailPrice (Set to $3,000,000.00)
-    # Insurance (Set to $1,000,000.00)
-    # ProfitLoss ('Profit', 'Loss', or 'Broke')
+# Variable set to values required for passing assignment
+qty_manufactured = 10
+cost = 2000000
+retail_price = 3000000
+insurance = 1000000
+
+# Additional variables to calculate profit and loss
+sales = 0
+overheads = 0
+earnings = 0
+profit_loss = ""
+
+
+# Logic function to calculate profit and loss for the month
+def calculate_sales(qty_manufactured, cost, insurance, retail_price):
+    global overheads
+    global earnings
+    global profit_loss
+    overheads = (qty_manufactured * cost) + insurance
+    earnings = sales * retail_price
+    if overheads > earnings:
+        profit_loss = "Loss"
+    if overheads == earnings:
+        profit_loss = "Broke Even"
+    if overheads < earnings:
+        profit_loss = "Profit"
+
 
 # Input the number of Sales made (Int)
+print("""Welcome to Lagomorpha Hovercrafts
+Please enter the number of sales made this month: 
+""")
+sales = int(input(""))
 
-# Logic
-    # Function to calculate the operating costs relative to the profits made
-    # Determine if there was a profit, loss, or break even situation
-        # Set variable to reflect the outcome
-    # Overheads = (Qty * Cost) + Insurance
-    # Earnings = Sales * RetailPrice
-    # If Loop to determine the outcome
+# Set function call
+calculate_sales(qty_manufactured, cost, insurance, retail_price)
 
 # Print Outputs
+print(f"Overheads for this month were: {overheads}")
+print(f"Earnings for this month were: {earnings}")
+print(f"Profit/loss for this month was: {earnings - overheads}")
+
+print(profit_loss) # Essential for passing the assignment
