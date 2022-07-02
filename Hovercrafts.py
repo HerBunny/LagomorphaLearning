@@ -26,18 +26,4 @@ def calculate_sales(qty_manufactured, cost, insurance, retail_price):
         profit_loss = "Profit"
 
 
-# Input the number of Sales made (Int)
-print("""Welcome to Lagomorpha Hovercrafts
-Please enter the number of sales made this month: 
-""")
-sales = int(input(""))
-
-# Set function call
-calculate_sales(qty_manufactured, cost, insurance, retail_price)
-
-# Print Outputs
-print(f"Overheads for this month were: {overheads}")
-print(f"Earnings for this month were: {earnings}")
-print(f"Profit/loss for this month was: {earnings - overheads}")
-
 print(profit_loss) # Essential for passing the assignment
