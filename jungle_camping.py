@@ -1,4 +1,4 @@
-sounds = input()
+sounds = input("What sounds did you hear?")
 words = sounds.split()
 identity = ""
 
