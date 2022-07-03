@@ -26,4 +26,9 @@ def calculate_sales(qty_manufactured, cost, insurance, retail_price):
         profit_loss = "Profit"
 
 
+sales = int(input("""How many sales have you made, this month?
+"""))
+
+calculate_sales(qty_manufactured, cost, insurance, retail_price)
+
 print(profit_loss) # Essential for passing the assignment
