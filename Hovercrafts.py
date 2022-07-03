@@ -18,12 +18,15 @@ def calculate_sales(qty_manufactured, cost, insurance, retail_price):
     global profit_loss
     overheads = (qty_manufactured * cost) + insurance
     earnings = sales * retail_price
+    cash = earnings - overheads
     if overheads > earnings:
         profit_loss = "Loss"
     if overheads == earnings:
         profit_loss = "Broke Even"
     if overheads < earnings:
         profit_loss = "Profit"
+    
+    print(f"Profit for this month was ${cash}")
 
 
 sales = int(input("""How many sales have you made, this month?
