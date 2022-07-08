@@ -1,8 +1,46 @@
 # Scratch Pad
 
-# Boolean Logic
+### Loops ###
 
-# And operator
+print("--- While Loops ---")
+
+x = 1
+while x < 10:
+    if x%2 == 0:
+        print(str(x) + " is even")
+    else:
+        print(str(x) + " is odd")
+    x += 1
+
+print("---------")
+
+sum = 0
+x = 10
+while x > 0:
+    sum += x
+    x -= 1
+
+print(sum)
+
+print("---------")
+
+x = 0
+while x < 10:
+    print(x)
+    x += 1
+
+print("---------")
+
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+
+print(str(i) + "Finished!")
+
+### Boolean Logic ###
+
+print("--- And operator ---")
 print(1 == 1 and 2 == 2)
 print(1 == 1 and 2 == 3)
 print(1 != 1 and 2 == 2)
@@ -34,7 +72,7 @@ elif not (1+1 == 3):
 else:
     print("3")
 
-# Chaining Booleans
+print("--- Chaining Booleans ---")
 country = "US"
 age = 42
 
