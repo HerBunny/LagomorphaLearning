@@ -1,5 +1,14 @@
 # Scratch Pad
 
+### Print ###
+
+print("Hi", "There")
+
+print("Space", "Hi", "there", sep=" ")
+print("Dash", "Hi", "there", sep="-")
+print("EndArg", "Hi", "there", sep="-", end=" ")
+print("Python is great!")
+
 ### Loops ###
 
 print("--- While Loops ---")
@@ -86,3 +95,73 @@ if (country == "US" or country == "GB") and (age > 0 and age < 100):
     # addition subtraction
 
 print(1+1*3)
+
+### Break & Continue ###
+
+print("--- Break ---")
+
+i = 0
+while True:
+    print(i)
+    i = i + 1
+    if i >= 5:
+        print("Breaking")
+        break
+
+print("Finished")
+
+i = 5
+while True:
+    print(i)
+    i = i - 1
+    if i <= 2:
+        break
+
+
+print("--- Continue ---")
+
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        print("Skipping 3")
+        continue
+    print(i)
+
+i = 0
+while True:
+    i += 1
+    if (i == 2):
+        continue
+    if (i == 5):
+        break
+
+    print(i)
+
+fares = 100
+passengers = []
+takings = 0
+
+while len(passengers) < 5:
+    user_input = int(input())
+    passengers.append(user_input)
+
+for passenger in passengers:
+    if passenger < 3:
+        continue
+    takings += fares
+
+print(takings)
+
+weight = float(input())
+height = float(input())
+bmi = weight / height**2
+
+if bmi > 30:
+    print("Obesity")
+elif bmi <= 25:
+    print("Overweight")
+elif bmi <= 18.5:
+    print("Normal")
+else:
+    print("Underweight")
