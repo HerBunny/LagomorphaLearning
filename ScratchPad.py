@@ -1,94 +1,9 @@
-if not True:
-    print("1")
-elif not (1+1 == 3):
-    print("2")
-else:
-    print("3")
-
-print("--- Chaining Booleans ---")
-country = "US"
-age = 42
-
-if (country == "US" or country == "GB") and (age > 0 and age < 100):
-    print("Cool")
-
-# Python order of math
-    # parentheses
-    # exponentiation
-    # multiplication / division
-    # addition subtraction
-
-print(1+1*3)
-
-### Break & Continue ###
-
-print("--- Break ---")
-
-i = 0
-while True:
-    print(i)
-    i = i + 1
-    if i >= 5:
-        print("Breaking")
-        break
-
-print("Finished")
-
-i = 5
-while True:
-    print(i)
-    i = i - 1
-    if i <= 2:
-        break
-
-
-print("--- Continue ---")
-
-i = 0
-while i < 5:
-    i += 1
-    if i == 3:
-        print("Skipping 3")
-        continue
-    print(i)
-
-i = 0
-while True:
-    i += 1
-    if (i == 2):
-        continue
-    if (i == 5):
-        break
-
-    print(i)
-
-fares = 100
-passengers = []
-takings = 0
-
-while len(passengers) < 5:
-    user_input = int(input())
-    passengers.append(user_input)
-
-for passenger in passengers:
-    if passenger < 3:
-        continue
-    takings += fares
-
-print(takings)
-
-weight = float(input())
-height = float(input())
-bmi = weight / height**2
-
-if bmi > 30:
-    print("Obesity")
-elif bmi <= 25:
-    print("Overweight")
-elif bmi <= 18.5:
-    print("Normal")
-else:
-    print("Underweight")
+#elif bmi <= 25:
+#    print("Overweight")
+#elif bmi <= 18.5:
+#    print("Normal")
+#else:
+#    print("Underweight")
 
 ### Basic Operators ###
 
@@ -296,5 +211,90 @@ print(names[1:-1])
 
 list = [1, 1, 2, 3, 5, 8, 13]
 print(list[list[4]])
+
+print("### Functions ###")
+
+nums = [1, 3, 5, 2, 4]
+print(len(nums))
+
+str = "some text"
+x = len(str)
+print(x)
+
+nums = [1, 2, 3]
+nums.append(4)
+print(nums)
+# Outputs: [1, 2, 3, 4]
+
+words = ["Python", "fun"]
+words.insert(1, "is")
+print(words)
+# Outputs: ["Python", "is", "fun"]
+
+letters = ["p", "q", "r", "s", "p", "u"]
+print(letters.index("r"))
+print(letters.index("p"))
+print(letters.index("q"))
+# Outputs: 
+# 2 
+# 0
+# 1
+
+x = [1, 8, 42, 3]
+print(min(x))
+print(max(x))
+# Outputs:
+# 1
+# 42
+
+
+x = [2, 4, 6, 2, 7, 2, 9]
+print(x.count(2))
+
+x.remove(4)
+print(x)
+
+x.reverse()
+print(x)
+# Outputs:
+# 3
+# [2, 6, 2, 7, 2, 9]
+# [9, 2, 7, 2, 6, 2]
+
+while 2 in x:
+    x.remove(2)
+    print(x)
+
+nums = [4,5,6]
+msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])
+print(msg)
+# Output: Numbers: 4 5 6
+
+a = "{x}, {y}".format(x=5, y=12)
+print(a)
+# Output: 5, 12
+
+x = ", ".join(["spam", "eggs", "ham"])
+print(x)
+# Output: spam, eggs, ham
+
+str = "some text goes here"
+x = str.split(" ")
+print(x)
+# Output: ['some', 'text', 'goes', 'here']
+
+x = "Hello ME"
+print(x.replace("ME", "world"))
+# Output: Hello world
+
+x = "HeLLo world"
+print(x.replace("L", "l"))
+# Output: Hello world
+
+print("This is a sentence.".upper())
+print("AN ALL CAPS SENTENCE".lower())
+# Output: 
+# THIS IS A SENTENCE
+# an all caps sentence
 
 print("<<<!!! End of Script !!!>>>")
