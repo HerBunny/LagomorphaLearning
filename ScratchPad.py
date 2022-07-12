@@ -1,41 +1,3 @@
-#elif bmi <= 25:
-#    print("Overweight")
-#elif bmi <= 18.5:
-#    print("Normal")
-#else:
-#    print("Underweight")
-
-### Basic Operators ###
-
-a = 10
-b = 21
-
-print("--- Arithmetic ---")
-
-print("Addition: " + str(a + b))
-print("Subtraction: " + str(a - b))
-print("Multiplication: " + str(a * b))
-print("Division: " + str(b / a))
-print("Modulus: " + str(b % a))
-print("Exponant: " + str(a**b))
-print("Floor: " + str(b // a))
-
-print("--- Comparisons ---")
-
-print("Equal to: " + str(a == b))
-print("Not equal to: " + str(a != b))
-print("Greater than: " + str(a > b))
-print("Less than: " + str(a < b))
-print("Greater than or equal to: " + str(a >= b))
-print("Less than or equal to: " + str(a <= b))
-
-print("--- Assignment ---")
-
-a = 6_418_372.00
-b = 3_888_497.00
-
-print(a + b)
-
 ### Lists ###
 
 print("--- Lists ---")
@@ -296,5 +258,56 @@ print("AN ALL CAPS SENTENCE".lower())
 # Output: 
 # THIS IS A SENTENCE
 # an all caps sentence
+
+### Module Imports ###
+
+### Functions ###
+
+def thefirst(): 
+    print(defvar)
+
+def my_func():
+    print("spam")
+    print("spam")
+    print("spam")
+
+def hello():
+    print("Hello world!")
+
+def exclaimation(word):
+    print(word + "!")
+
+def print_sum_twice(x, y):
+    print(x + y)    
+    print(x + y)
+
+def sum(x, y):
+    return x + y
+
+def max(x, y):
+    if x >= y:
+        return x
+    else:
+        return y
+
+def add_numbers(x, y):
+    total = x + y
+    return total
+    print("This line shall not pass!!!")
+
+def double(a, b):
+    return [a*2, b*2]        
+
+### Variables ###
+
+defvar = "Oh, yeah!"
+result = sum(42, 7)
+x = double(6, 9)
+
+### Inputs ###
+
+### Outputs ###
+
+print(x)
 
 print("<<<!!! End of Script !!!>>>")
