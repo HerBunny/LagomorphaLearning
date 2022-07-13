@@ -1,12 +1,3 @@
-### Lists ###
-
-print("--- Lists ---")
-
-words = ["Hello", "world", "!"]
-print(words[0])
-print(words[1])
-print(words[2])
-
 print("--- Different Data Types ---")
 
 x = ["a","b","c"]
@@ -80,7 +71,7 @@ if "o w" in x:
 print("---------")
 
 nums = [1, 2, 3]
-print(not 4 in nums)
+print(not 4 in nums) 
 print(4 not in nums)
 print(not 3 in nums)
 print(3 not in nums)
@@ -263,6 +254,9 @@ print("AN ALL CAPS SENTENCE".lower())
 
 ### Functions ###
 
+def congrats(name, count, course):
+    print(f"Congrats {name}, on achieving your {count} certificate in {course}!!!")
+
 def thefirst(): 
     print(defvar)
 
@@ -298,16 +292,58 @@ def add_numbers(x, y):
 def double(a, b):
     return [a*2, b*2]        
 
-### Variables ###
+def words_list(list):
+    print(list[0])
+    print(list[1])
+    print(list[2])    
+
+def a_comment():
+    x = 365
+    y = 7
+
+    print(x % y) # find the remainder
+
+def multi_comment():
+    x = 42
+    y = 9
+    # this is a comment
+
+    print(x % y) # find the remainder
+    # print (x // y)
+    # another comment
+
+def shout(word):
+    """
+    Print a word with an 
+    exclaimation mark following it.
+    """
+    print(word + "!")
+
+# <<< Dictionaries, Lists & Variables >>>
+
+words = ["Hello", "world", "!"]
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
+           "j", "k", "l", "m", "n", "o", "p", "q", "r",
+           "s", "t", "u", "v", "w", "x", "y", "z"]
+punctuation = [",", ".", "!", "?"]
 
 defvar = "Oh, yeah!"
 result = sum(42, 7)
-x = double(6, 9)
+x = 365
+y = 7
 
-### Inputs ###
+if __name__ == "__main__":
+    # Code to execute when run directly
+    
+    shout("spam")
 
-### Outputs ###
+    def print_nums(x):
+        for i in range(x):
+            print(i)
+            return
+    
+    print_nums(10)
 
-print(x)
 
-print("<<<!!! End of Script !!!>>>")
+    print("<<<!!! End of Script !!!>>>")

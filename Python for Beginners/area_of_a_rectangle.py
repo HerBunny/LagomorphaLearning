@@ -5,7 +5,7 @@
 def rectangle(x, y):
     return x * y
     
-### Variables ###
+### Dictionaries, Lists & Variables ###
 
 ### Inputs & Function Calls ###
 
