@@ -1,3 +1,27 @@
+# Python3 Scratch Pad
+
+def python_core():
+    def basic_concepts():
+        """
+        Exponentiation*
+        Quotient & Remainder*
+        Module 1 Quiz
+        Exponentiation Coding Project
+        """
+    def strings_and_variables():
+        """
+        Strings
+        Newlines
+        String Operations
+        Variables
+        Working with Variables
+        Taking User Input
+        Working with Input
+        In-Place and Walrus Operations
+        Module 2 Quiz
+        Simple Calculator Coding Project
+        """
+
 print("--- Different Data Types ---")
 
 x = ["a","b","c"]
@@ -319,6 +343,14 @@ def shout(word):
     """
     print(word + "!")
 
+def print_calculations(a, b, c, d, e):
+    print(a + b)
+    print(c + d - e)
+
+def order_of_operations(a, b, c, d, e):
+    print(a * (b + c))
+    print(d / e)
+
 # <<< Dictionaries, Lists & Variables >>>
 
 words = ["Hello", "world", "!"]
@@ -328,22 +360,19 @@ letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
            "s", "t", "u", "v", "w", "x", "y", "z"]
 punctuation = [",", ".", "!", "?"]
 
-defvar = "Oh, yeah!"
-result = sum(42, 7)
-x = 365
-y = 7
+defvar = "Oh, Yeah!!!"
+a = 2
+b = 2
+c = 5
+d = 4
+e = 3
+
 
 if __name__ == "__main__":
     # Code to execute when run directly
-    
-    shout("spam")
+    congrats("Iain", "First", "Python for Beginners")    
 
-    def print_nums(x):
-        for i in range(x):
-            print(i)
-            return
-    
-    print_nums(10)
-
+    print_calculations(a, b, c, d, e)
+    order_of_operations(a, b, c, d, e)
 
     print("<<<!!! End of Script !!!>>>")
