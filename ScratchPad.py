@@ -3,10 +3,8 @@
 def python_core():
     def basic_concepts():
         """
-        Exponentiation*
-        Quotient & Remainder*
-        Module 1 Quiz
-        Exponentiation Coding Project
+        Module 1 Quiz*
+        Exponentiation Coding Project*
         """
     def strings_and_variables():
         """
@@ -20,6 +18,21 @@ def python_core():
         In-Place and Walrus Operations
         Module 2 Quiz
         Simple Calculator Coding Project
+        """
+    def control_structures():
+        """
+        Booleans & Comparisons
+        If Statements
+        Boolean Logic
+        Multiple Operators & ...
+        Lists
+        List Operations
+        List Functions
+        While Loops
+        For Loops
+        Range
+        Module 3 Quiz
+        FizzBuzz
         """
 
 print("--- Different Data Types ---")
@@ -351,7 +364,28 @@ def order_of_operations(a, b, c, d, e):
     print(a * (b + c))
     print(d / e)
 
-# <<< Dictionaries, Lists & Variables >>>
+def exponentiation(x, y):
+    """
+    Raises x to the power of y.
+    """
+    return x**y
+
+def sqr_root(x):
+    """
+    Returns the square root of a number.
+    """
+    return (x ** (1/2))
+
+def divide_and_conquer(x, y):
+    """
+    Performs division using the two inputs,
+    then outputs the quotient and remainder.
+    """
+    q = int(x // y)
+    r = int(x % y)
+    print(f"The result of dividing {int(x)} by {int(y)} is that...")
+    print(f"{int(y)} goes into {int(x)}, {q} times.")
+    print(f"With a remainder of {r}")    
 
 words = ["Hello", "world", "!"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -372,7 +406,22 @@ if __name__ == "__main__":
     # Code to execute when run directly
     congrats("Iain", "First", "Python for Beginners")    
 
-    print_calculations(a, b, c, d, e)
-    order_of_operations(a, b, c, d, e)
+    print("Exponentiation:")
+    base_num = float(input("Enter your base number: "))
+    exponant = float(input("Enter your exponant: "))
+
+    result = exponentiation(base_num, exponant)
+    print(f"{result} \n")
+
+    print("Square root:")
+    num = float(input("Please enter a number you'd like the square root of: "))
+    result = sqr_root(num)
+    print(f"{result} \n")
+
+    print("Division:")
+    dividend = float(input("Please enter your dividend: "))
+    divisor = float(input("please enter you divisor: "))
+    divide_and_conquer(dividend, divisor)
+    print(f"\n")
 
     print("<<<!!! End of Script !!!>>>")
