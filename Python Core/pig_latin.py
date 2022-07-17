@@ -39,11 +39,12 @@ def pig_latin(words, punct):
             head = word[0]
             body = word[1:]
             translated = (body + head + "ay")
+            print(translated)
             trans_list.append(translated)              
 
     return trans_list
 
-def str_stitcher(words):
+def str_stitcher(words, punct):
     """
     combine all list elements into a single output string.
     """
@@ -53,17 +54,27 @@ def str_stitcher(words):
     while len(word_queue) > 0:
         word = word_queue.pop(0)
 
-        if len(result) == 0 or result[-1] == ".":
-            word = word[0].upper()
-            result += " " + word
+        if len(result) == 0 or result[-1] not in punct:
+            word = word[0].upper() + word[1:]
+            if word not in punct:
+                result += " " + word
+            else:
+                result = result[:-1] + word
         else:
-            result += " " + word
+            if word not in punct:
+                result += " " + word
+            else:
+                result = result[:-1] + word
 
-    return result[1:]
+    if result[0] == " ":
+        return result[1:]
+    else:
+        return result
 
 
 if __name__ == "__main__":
     
+    words = ""
     punct = [".", ",", "?", "!"]
     
     while True:
@@ -75,10 +86,11 @@ if __name__ == "__main__":
         if initial_text_input == "quit":
             break
 
+        words = initial_text_input
         words = initial_text_input.split()
         words = punctuation(words, punct)
         words = pig_latin(words, punct)
-        words = str_stitcher(words)
+        words = str_stitcher(words, punct)
 
         print(words)
 
