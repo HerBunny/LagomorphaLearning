@@ -1,11 +1,6 @@
 # Python3 Scratch Pad
 
 def python_core():
-    def basic_concepts():
-        """
-        Module 1 Quiz*
-        Exponentiation Coding Project*
-        """
     def strings_and_variables():
         """
         Strings
@@ -425,3 +420,14 @@ if __name__ == "__main__":
     print(f"\n")
 
     print("<<<!!! End of Script !!!>>>")
+
+    print("     👨‍💻      🐇")
+    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
+    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
+    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
+
+    
