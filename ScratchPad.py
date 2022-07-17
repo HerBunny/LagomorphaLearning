@@ -3,12 +3,9 @@
 def python_core():
     def strings_and_variables():
         """
-        Strings
-        Newlines
-        String Operations
-        Variables
-        Working with Variables
-        Taking User Input
+        Variables*
+        Working with Variables*
+        Taking User Input*
         Working with Input
         In-Place and Walrus Operations
         Module 2 Quiz
@@ -28,6 +25,19 @@ def python_core():
         Range
         Module 3 Quiz
         FizzBuzz
+        """
+    def functions_and_modules():
+        """
+        Code Reuse
+        Functions
+        Function Arguments
+        Returning from Functions
+        Comments & Docstrings
+        Functions as Objects
+        Modules
+        The Standard Library & pip
+        Module 4 Quiz
+        Celsius to Fahrenheit Converter Project
         """
 
 print("--- Different Data Types ---")
@@ -382,6 +392,40 @@ def divide_and_conquer(x, y):
     print(f"{int(y)} goes into {int(x)}, {q} times.")
     print(f"With a remainder of {r}")    
 
+def tag():
+    print("     👨‍💻      🐇")
+    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
+    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
+    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
+    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
+
+def strings():
+    print("Python is fun!")
+    print('Always look on the bright side of life')
+
+def backslash():
+    print('Brian\'s mother: He\'s not an angel. He\'s a very naughty boy!')
+
+def newlines():
+    print('One\nTwo\nThree')
+
+def multiline_text():
+    print("""this
+    is a
+    multiline
+    text""")
+
+def concatenation():
+    print("Spam" + 'eggs')
+    print("2" + "2")
+
+def string_operations():
+    print("Spam" * 3)
+    print(4 * '2')
+
 words = ["Hello", "world", "!"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
@@ -399,35 +443,36 @@ e = 3
 
 if __name__ == "__main__":
     # Code to execute when run directly
+
     congrats("Iain", "First", "Python for Beginners")    
+    input("\n Press the enter key to continue")
 
-    print("Exponentiation:")
-    base_num = float(input("Enter your base number: "))
-    exponant = float(input("Enter your exponant: "))
+    print("Tag:")
+    tag()
+    input("\n Press the enter key to continue")
 
-    result = exponentiation(base_num, exponant)
-    print(f"{result} \n")
+    print("Strings:")
+    strings()
+    input("\n Press the enter key to continue")
 
-    print("Square root:")
-    num = float(input("Please enter a number you'd like the square root of: "))
-    result = sqr_root(num)
-    print(f"{result} \n")
+    print("Backslash:")
+    backslash()
+    input("\n Press the enter key to continue")
 
-    print("Division:")
-    dividend = float(input("Please enter your dividend: "))
-    divisor = float(input("please enter you divisor: "))
-    divide_and_conquer(dividend, divisor)
-    print(f"\n")
+    print("Newlines:")
+    newlines()
+    input("\n Press the enter key to continue")
+
+    print("Multiline Text:")
+    multiline_text()
+    input("\n Press the enter key to continue")
+
+    print("Concatenation:")
+    concatenation()
+    input("\n Press the enter key to continue")
+
+    print("String Operations:")
+    string_operations()
+    input("\n Press the enter key to continue")
 
     print("<<<!!! End of Script !!!>>>")
-
-    print("     👨‍💻      🐇")
-    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
-    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
-    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
-    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
-    print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
-    print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
-    print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
-
-    
