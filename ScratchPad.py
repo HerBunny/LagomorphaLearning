@@ -3,11 +3,8 @@
 def python_core():
     def strings_and_variables():
         """
-        Variables*
-        Working with Variables*
-        Taking User Input*
-        Working with Input
-        In-Place and Walrus Operations
+        Working with Input*
+        In-Place and Walrus Operations*
         Module 2 Quiz
         Simple Calculator Coding Project
         """
@@ -39,30 +36,26 @@ def python_core():
         Module 4 Quiz
         Celsius to Fahrenheit Converter Project
         """
-
-print("--- Different Data Types ---")
-
-x = ["a","b","c"]
-y = [1, 2, 3, 4, 5]
-
-print(x[1])
-print(y[3])
-
-print("--- Nested Lists ---")
-
-m = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-
-print(m[1][2]) # List, Row, Element Number
-
-print("--- Strings ---")
-
-str = "Hello World!"
-print(str[6])
-
-print("--- Print 3rd Element of input")
+    def exceptions_and_files():
+        """
+        41.1 - Exceptions
+        42.1 - Exception Handling
+        42.2 - Bank card PIN System
+        43.1 - finally
+        43.2 - Making Coffee
+        44.1 - Raising Exceptions
+        45.1 - Assertions
+        45.2 - ???
+        46.1 - Opening Files
+        46.2 - ???
+        47.1 - Reading Files
+        47.2 - Getting in Shape
+        48.1 - Writing Files
+        48.2 - New Lines
+        49.1 - Working with Files
+        50.1 - Module 5 Quiz
+        51 - Code Project: Book Titles
+        """
 
 print(input("Please enter some text: ")[2])
 
@@ -426,6 +419,57 @@ def string_operations():
     print("Spam" * 3)
     print(4 * '2')
 
+def corresponding_ops(y):
+    """
+    Variables can be used to perform corresponding operations.
+    """
+    print("Corresponding Ops:")
+    
+    x = 7
+    print(x)
+
+    print(x + y)
+    print(x)
+
+    input("\nHit enter to Continue")
+
+def variable_reassignment():
+    """
+    Variables don't have a specific data type. They can be changed to other types as needed.
+    """
+    print("Variable Reassignment: ")
+
+    x = 123.456
+    print(f"x = {x}")
+
+    x = "This is a string"
+    print(f'x = {x + "!"}')
+
+    input("\nHit enter to Continue")
+
+def user_input():
+    """
+    The intuitively named input function, is used to get an input from the user.
+    """
+    print("User Input:")
+
+    x = input("Enter something: ")
+    print(f"You typed: {x}")
+
+    input("\nHit enter to continue...")
+
+def user_input_2():
+    """
+    User inputs must be followed by parentheses. A prompt may be given within the parenthesis.
+    """
+    print("User input 2:")
+
+    name = input("Enter your name: ")
+    print(f"Hello {name}. Good to meet you. :)")
+
+    input("\nHit enter to continue...")
+
+
 words = ["Hello", "world", "!"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
@@ -444,35 +488,13 @@ e = 3
 if __name__ == "__main__":
     # Code to execute when run directly
 
+    print("Congrats:")
     congrats("Iain", "First", "Python for Beginners")    
     input("\n Press the enter key to continue")
 
-    print("Tag:")
-    tag()
-    input("\n Press the enter key to continue")
-
-    print("Strings:")
-    strings()
-    input("\n Press the enter key to continue")
-
-    print("Backslash:")
-    backslash()
-    input("\n Press the enter key to continue")
-
-    print("Newlines:")
-    newlines()
-    input("\n Press the enter key to continue")
-
-    print("Multiline Text:")
-    multiline_text()
-    input("\n Press the enter key to continue")
-
-    print("Concatenation:")
-    concatenation()
-    input("\n Press the enter key to continue")
-
-    print("String Operations:")
-    string_operations()
-    input("\n Press the enter key to continue")
+    corresponding_ops(40)
+    variable_reassignment()
+    user_input()
+    user_input_2()
 
     print("<<<!!! End of Script !!!>>>")
