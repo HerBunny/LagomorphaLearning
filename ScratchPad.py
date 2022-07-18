@@ -57,22 +57,7 @@ def python_core():
         51 - Code Project: Book Titles
         """
 
-print(input("Please enter some text: ")[2])
-
-print("### List Operations ###")
-
-print("--- Reassigning Element Values")
-
-nums = [5, 8, 2]
-print(nums)
-nums[1] = 42
-print(nums)
-
-nums = [1, 2, 3]
-print(nums + [4, 5, 6])
-print(nums + [7, 8, 9])
-
-nums += [4, 5, 6]
+nums = [4, 5, 6]
 nums += [7, 8, 9]
 
 print(nums)
@@ -431,6 +416,10 @@ def corresponding_ops(y):
     print(x + y)
     print(x)
 
+    #> 7
+    #> 47
+    #> 7
+
     input("\nHit enter to Continue")
 
 def variable_reassignment():
@@ -445,6 +434,9 @@ def variable_reassignment():
     x = "This is a string"
     print(f'x = {x + "!"}')
 
+    #> x = 123.456
+    #> x = This is a string!
+
     input("\nHit enter to Continue")
 
 def user_input():
@@ -456,6 +448,9 @@ def user_input():
     x = input("Enter something: ")
     print(f"You typed: {x}")
 
+    #> User Input:
+    #> You typed: [your input here]
+
     input("\nHit enter to continue...")
 
 def user_input_2():
@@ -466,6 +461,9 @@ def user_input_2():
 
     name = input("Enter your name: ")
     print(f"Hello {name}. Good to meet you. :)")
+
+    #> Enter your name:
+    #> Hello [your name]. Good to meet you. :)
 
     input("\nHit enter to continue...")
 
