@@ -3,10 +3,8 @@
 def python_core():
     def strings_and_variables():
         """
-        Working with Input*
-        In-Place and Walrus Operations*
-        Module 2 Quiz
-        Simple Calculator Coding Project
+        Module 2 Quiz*
+        Simple Calculator Coding Project*
         """
     def control_structures():
         """
@@ -54,138 +52,30 @@ def python_core():
         48.2 - New Lines
         49.1 - Working with Files
         50.1 - Module 5 Quiz
-        51 - Code Project: Book Titles
+        51.1 - Code Project: Book Titles
         """
-
-nums = [4, 5, 6]
-nums += [7, 8, 9]
-
-print(nums)
-
-print(6//2)
-
-print("---------")
-
-nums = [1, 2, 3]
-print(nums * 3)
-
-print("---------")
-
-words = [
-    "spam",
-    "egg",
-    "spam",
-    "sausage"
-    ]
-
-print("spam" in words)
-print("egg" in words)
-print("tomato" in words)
-
-print("---------")
-
-x = "hello world"
-if "o w" in x:
-    print("Yes")
-
-print("---------")
-
-nums = [1, 2, 3]
-print(not 4 in nums) 
-print(4 not in nums)
-print(not 3 in nums)
-print(3 not in nums)
-
-print("### for Loops")
-
-words = [
-    "hello",
-    "world",
-    "spam",
-    "eggs"
-    ]
-
-for word in words:
-    print(word + "!")
-
-print("---------")
-
-nums = [4, 7, 3, 1]
-for x in nums:
-    print(x*2)
-
-print("---------")
-
-str = "testing for loops"
-count = 0
-
-for x in str:
-    if x == 't':
-        count += 1
-
-print(count)
-
-print("---------")
-
-text = "some text"
-
-for x in text:
-    if x == 'e':
-        break
-    print(x)
-
-print("### Ranges ###")
-
-numbers = list(range(10))
-
-for num in numbers:
-    print(num)
-
-print(numbers)
-
-print("---------")
-
-numbers = list(range(3, 8))
-print(numbers)
-
-print("---------")
-
-numbers = list(range(5, 20, 2))
-print(numbers)
-
-print("---------")
-
-x = list(range(7, 3, -1))
-print(x)
-
-print("---------")
-
-for i in range(5):
-    print("Hello!")
-
-print("### List Slices ###")
-
-squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-print(squares[2:6])
-print(squares[3:8])
-print(squares[0:1])
-print(squares[:7])
-print(squares[7:])
-print(squares[::2])
-print(squares[2:8:3])
-print(squares[1:-2])
-
-res = squares[::-1]
-print(res)
-
-names = ["Iain", "James", "Gary", "Mike", "Stewart"]
-
-print(names[1:-1])
-
-list = [1, 1, 2, 3, 5, 8, 13]
-print(list[list[4]])
-
-print("### Functions ###")
+    def more_types():
+        """
+        52.1 - None
+        53.1 - Dictionaries
+        53.2 - Inventory Management
+        54.1 - Dictionary Functions
+        54.2 - Where's The Book?
+        55.1 - Tuples
+        55.2 - Tuples
+        56.1 - List Slices
+        56.2 - List Slices
+        57.1 - List Comprehensions
+        57.2 - List of Multiples
+        58.1 - String Formatting
+        58.2 - Names and Ages
+        59.1 - Useful Functions
+        59.2 - Broken Keyboard
+        60.1 - Text Analyzer
+        60.2 - How many words?
+        61.1 - Module 6 Quiz
+        62 - Longest Word
+        """
 
 nums = [1, 3, 5, 2, 4]
 print(len(nums))
@@ -275,7 +165,14 @@ print("AN ALL CAPS SENTENCE".lower())
 ### Functions ###
 
 def congrats(name, count, course):
+    """
+    Just for fun, way of marking milestones in my learning journey. ;)
+    """
+    print("Congrats:")
+    
     print(f"Congrats {name}, on achieving your {count} certificate in {course}!!!")
+
+    input("\nHit enter to continue...")
 
 def thefirst(): 
     print(defvar)
@@ -437,7 +334,7 @@ def variable_reassignment():
     #> x = 123.456
     #> x = This is a string!
 
-    input("\nHit enter to Continue")
+    input("\nHit enter to Continue...")
 
 def user_input():
     """
@@ -467,7 +364,111 @@ def user_input_2():
 
     input("\nHit enter to continue...")
 
+def str_as_int():
+    """
+    Inputs are strings by default, though they can be converted to an integer, for use in calculations.
+    """
+    print("String inputs as Integers: ")
 
+    age = int(input("Enter your age: "))
+    print(age)
+    print(int(age/2))
+    print(f"Your age is {age}")
+
+    #> [Integer you entered]
+    #> [Half of the integer value, you entered]
+    #> Your age is [Integer you entered]    
+
+    input("\nHit enter to continue...")
+
+def name_and_age():
+    """
+    Taking an input for name & age, and then using that to output a response.
+    """
+    print("Name and Age: ")
+
+    name = input("What is your name? ")
+    age = input("How old are you? ")
+
+    print(f"{name} is {age} years old.")
+
+    #> {name} is {age} years old.
+
+    input("\nHit enter to continue...")
+
+def multiple_variables():
+    """
+    Code coach exercize
+    """
+    print("Code Coach: Multiple Variables: ")
+    
+    x = input()
+    y = input()
+
+    print(x * int(y))
+
+    #> xxx...
+
+    input("\nHit enter to continue...")
+    
+def in_place_operators():
+    """
+    In-place operators allow for more concise coding.
+    """
+    print("In-Place operators:")
+
+    x = 2
+    print(f"setting initial value for x: {x}")
+
+    x += 3
+    print(f"Adding 3 to x: {x}")
+
+    x *= 3
+    print(f"Multiplying x by 3: {x}")
+
+    x /= 3
+    print(f"Dividing x by 3: {x}")
+
+    input("\nHit enter to continue...")
+
+def spam_and_eggs():
+    """
+    What's a little spam, without eggs? ;)
+    """
+    print("Spam and Eggs:")
+
+    x = "spam"
+    print(x)
+
+    x += "eggs"
+    print(x)
+
+    #> spam
+    #> spameggs
+
+    input("\nHit enter to continue...")
+
+def walrus_operator():
+    """
+    A walrus operator allows you to assign values to a variable, within an expression, even to a variable that doesn't yet exist.
+    """
+    print("Walrus Operators: ")
+    
+    # The conventional way
+    num = int(input("Enter a number"))
+    print(num)
+
+    # The Walrus way
+    # print(wal := int(input())) # Requires Python 3.8+
+
+    input("\nHit enter to continue...")
+
+def what_indeed():
+    print('“Alright, but apart from the sanitation, the medicine, education, wine, public order, irrigation, roads, the fresh-water system, and public health, what have the Romans ever done for us?”')
+
+    input("\nHit enter to continue...")
+
+    
 words = ["Hello", "world", "!"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
@@ -485,14 +486,14 @@ e = 3
 
 if __name__ == "__main__":
     # Code to execute when run directly
-
-    print("Congrats:")
     congrats("Iain", "First", "Python for Beginners")    
-    input("\n Press the enter key to continue")
 
-    corresponding_ops(40)
-    variable_reassignment()
-    user_input()
-    user_input_2()
+    x = input() or what_indeed()
+    walrus_operator()
+    spam_and_eggs()
+    in_place_operators()
+    multiple_variables()
+    name_and_age()
+    str_as_int()
 
     print("<<<!!! End of Script !!!>>>")
