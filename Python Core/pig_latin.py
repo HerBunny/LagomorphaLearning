@@ -1,7 +1,10 @@
 # Pig Latin
 
 """
-The brief for this project is for a program that can take a word, or phrase from the user, and translate it into "pig latin".
+The brief for this project is for a program that can take a word, or phrase
+from the user, and translate it into "pig latin". This, however,
+won't pass the 'Pig Latin' code coach. As this program capitalises the
+first letter of each word, following a '.', '?' and '!'. 
 """
 
 def punctuation(words, punct):
@@ -39,7 +42,6 @@ def pig_latin(words, punct):
             head = word[0]
             body = word[1:]
             translated = (body + head + "ay")
-            print(translated)
             trans_list.append(translated)              
 
     return trans_list
@@ -53,46 +55,35 @@ def str_stitcher(words, punct):
 
     while len(word_queue) > 0:
         word = word_queue.pop(0)
-
-        if len(result) == 0 or result[-1] not in punct:
+        
+        if len(result) == 0 or result[-2] in punct[2:]:
             word = word[0].upper() + word[1:]
-            if word not in punct:
-                result += " " + word
-            else:
-                result = result[:-1] + word
+            
+        if word in punct:
+            result = result[:-1] + word + " "
         else:
-            if word not in punct:
-                result += " " + word
-            else:
-                result = result[:-1] + word
-
-    if result[0] == " ":
-        return result[1:]
-    else:
-        return result
+            result += word + " "
+    
+    return result
 
 
 if __name__ == "__main__":
     
     words = ""
-    punct = [".", ",", "?", "!"]
+    punct = ["'", ",", ".", "?", "!"]
+    romans = "Alright, but apart from the sanitation, the medicine, education, wine, public order, irrigation, roads, the fresh-water system, and public health, what have the Romans ever done for us?"
+
     
-    while True:
+    if __name__ == "__main__":
 
-        initial_text_input = input("Please enter some text for translation, or 'quit' to exit: ")
-
-        initial_text_input = initial_text_input.lower()
-
-        if initial_text_input == "quit":
-            break
+        initial_text_input = input("Please enter some text for translation, or 'quit' to exit, or hit enter: ") or romans
 
         words = initial_text_input
+        print(f"\n Original: {words}")
+
+        words = initial_text_input.lower()
         words = initial_text_input.split()
         words = punctuation(words, punct)
         words = pig_latin(words, punct)
         words = str_stitcher(words, punct)
-
-        print(words)
-
-        input("\n\nHit enter to continue")
-
+        print(f"\n Translated: {words}")

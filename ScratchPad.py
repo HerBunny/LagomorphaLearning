@@ -1,15 +1,13 @@
 # Python3 Scratch Pad
 
 def python_core():
-    def strings_and_variables():
-        """
-        Module 2 Quiz*
-        Simple Calculator Coding Project*
-        """
     def control_structures():
         """
-        Booleans & Comparisons
-        If Statements
+        Booleans & Comparisons*
+        If Statements*
+        At The Boiling Point
+        else Statements*
+        Club Bouncer Code*
         Boolean Logic
         Multiple Operators & ...
         Lists
@@ -76,9 +74,27 @@ def python_core():
         61.1 - Module 6 Quiz
         62 - Longest Word
         """
-
-nums = [1, 3, 5, 2, 4]
-print(len(nums))
+    def functional_programming():
+        """
+        63.1 - Functional programming
+        63.2 - ???
+        64.1 - Lambdas
+        64.2 - Lambdas
+        65.1 - map & filter
+        65.2 - Filtering
+        66.1 - Generators
+        66.2 - Split Generator
+        67.1 - Decorators
+        67.2 - Uppercasing
+        68.1 - Recusion
+        68.2 - Fun With Math
+        69.1 - Sets
+        69.2 - Commonality
+        70.1 - intertools
+        70.2 - Ordering
+        71.1 - Module 7 Quiz
+        72 - Fibernacci Code Project
+        """
 
 str = "some text"
 x = len(str)
@@ -464,36 +480,21 @@ def walrus_operator():
     input("\nHit enter to continue...")
 
 def what_indeed():
-    print('“Alright, but apart from the sanitation, the medicine, education, wine, public order, irrigation, roads, the fresh-water system, and public health, what have the Romans ever done for us?”')
+    print("Alright, but apart from the sanitation, the medicine, education, wine, public order, irrigation, roads, the fresh-water system, and public health, what have the Romans ever done for us?")
 
     input("\nHit enter to continue...")
 
     
 words = ["Hello", "world", "!"]
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
            "j", "k", "l", "m", "n", "o", "p", "q", "r",
            "s", "t", "u", "v", "w", "x", "y", "z"]
-punctuation = [",", ".", "!", "?"]
 
-defvar = "Oh, Yeah!!!"
 a = 2
-b = 2
-c = 5
-d = 4
-e = 3
 
 
 if __name__ == "__main__":
     # Code to execute when run directly
     congrats("Iain", "First", "Python for Beginners")    
-
-    x = input() or what_indeed()
-    walrus_operator()
-    spam_and_eggs()
-    in_place_operators()
-    multiple_variables()
-    name_and_age()
-    str_as_int()
 
     print("<<<!!! End of Script !!!>>>")
