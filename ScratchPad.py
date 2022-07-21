@@ -1,13 +1,10 @@
-# Python3 Scratch Pad
+#! /usr/bin/python3
+
+# Random Python Scratch Pad
 
 def python_core():
     def control_structures():
         """
-        Booleans & Comparisons*
-        If Statements*
-        At The Boiling Point
-        else Statements*
-        Club Bouncer Code*
         Boolean Logic
         Multiple Operators & ...
         Lists
@@ -95,86 +92,28 @@ def python_core():
         71.1 - Module 7 Quiz
         72 - Fibernacci Code Project
         """
+    def oop():
+        """
+        73.1 - Classes
+        73.2 - Student Class
+        74.1 - Inheritance
+        74.2 - Fun with Classes
+        75.1 - Magic Methods & O...
+        75.2 - Bank Accounts
+        76.1 - Object Lifecycle
+        76.2 - ???
+        77.1 - Data Hiding
+        77.2 - Making a Deposit
+        78.1 - Class & Static Methods
+        78.2 - Static Methods
+        79.1 - Properties
+        79.2 - Property Values
+        80.1 - A Simple Game
+        80.2 - ???
+        81.1 - Module 8 Quiz
+        82 - Juice Maker
+        """
 
-str = "some text"
-x = len(str)
-print(x)
-
-nums = [1, 2, 3]
-nums.append(4)
-print(nums)
-# Outputs: [1, 2, 3, 4]
-
-words = ["Python", "fun"]
-words.insert(1, "is")
-print(words)
-# Outputs: ["Python", "is", "fun"]
-
-letters = ["p", "q", "r", "s", "p", "u"]
-print(letters.index("r"))
-print(letters.index("p"))
-print(letters.index("q"))
-# Outputs: 
-# 2 
-# 0
-# 1
-
-x = [1, 8, 42, 3]
-print(min(x))
-print(max(x))
-# Outputs:
-# 1
-# 42
-
-
-x = [2, 4, 6, 2, 7, 2, 9]
-print(x.count(2))
-
-x.remove(4)
-print(x)
-
-x.reverse()
-print(x)
-# Outputs:
-# 3
-# [2, 6, 2, 7, 2, 9]
-# [9, 2, 7, 2, 6, 2]
-
-while 2 in x:
-    x.remove(2)
-    print(x)
-
-nums = [4,5,6]
-msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])
-print(msg)
-# Output: Numbers: 4 5 6
-
-a = "{x}, {y}".format(x=5, y=12)
-print(a)
-# Output: 5, 12
-
-x = ", ".join(["spam", "eggs", "ham"])
-print(x)
-# Output: spam, eggs, ham
-
-str = "some text goes here"
-x = str.split(" ")
-print(x)
-# Output: ['some', 'text', 'goes', 'here']
-
-x = "Hello ME"
-print(x.replace("ME", "world"))
-# Output: Hello world
-
-x = "HeLLo world"
-print(x.replace("L", "l"))
-# Output: Hello world
-
-print("This is a sentence.".upper())
-print("AN ALL CAPS SENTENCE".lower())
-# Output: 
-# THIS IS A SENTENCE
-# an all caps sentence
 
 ### Module Imports ###
 
@@ -189,61 +128,6 @@ def congrats(name, count, course):
     print(f"Congrats {name}, on achieving your {count} certificate in {course}!!!")
 
     input("\nHit enter to continue...")
-
-def thefirst(): 
-    print(defvar)
-
-def my_func():
-    print("spam")
-    print("spam")
-    print("spam")
-
-def hello():
-    print("Hello world!")
-
-def exclaimation(word):
-    print(word + "!")
-
-def print_sum_twice(x, y):
-    print(x + y)    
-    print(x + y)
-
-def sum(x, y):
-    return x + y
-
-def max(x, y):
-    if x >= y:
-        return x
-    else:
-        return y
-
-def add_numbers(x, y):
-    total = x + y
-    return total
-    print("This line shall not pass!!!")
-
-def double(a, b):
-    return [a*2, b*2]        
-
-def words_list(list):
-    print(list[0])
-    print(list[1])
-    print(list[2])    
-
-def a_comment():
-    x = 365
-    y = 7
-
-    print(x % y) # find the remainder
-
-def multi_comment():
-    x = 42
-    y = 9
-    # this is a comment
-
-    print(x % y) # find the remainder
-    # print (x // y)
-    # another comment
 
 def shout(word):
     """
@@ -484,17 +368,185 @@ def what_indeed():
 
     input("\nHit enter to continue...")
 
-    
-words = ["Hello", "world", "!"]
-letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
-           "j", "k", "l", "m", "n", "o", "p", "q", "r",
-           "s", "t", "u", "v", "w", "x", "y", "z"]
+def simple_calculator(x, y, op):
+    def add(a, b):
+        return a + b
 
-a = 2
+    def subtract(a, b):
+        return a - b
+
+    def multiply(a, b):
+        return a * b
+
+    def divide(a, b):
+        return a / b
+
+    def floor(a, b):
+        return a // b
+    
+    def modulus(a, b):
+        return a % b
+
+    if op == "+":
+        result = add(x, y)
+    elif op == "-":
+        result = subtract(x, y)
+    elif op == "*":
+        result = multiply(x, y)
+    elif op == "/":
+        result = divide(x, y)
+    elif op == "//":
+        result = floor(x, y)
+    elif op == "%":
+        result = modulus(x, y)
+    else:
+        result = "Operator Error!!!"
+
+
+    print(f"{x} {op} {y} = {result}")
+
+def booleans(x, y):
+    """
+    Comparing values to determine if they are equal.
+    """
+    z = x == y
+    print(f"{x} == {y}: {z}")
+
+def booleans_no_match(x, y):
+    """
+    Comparing values to determine if the are not equal.
+    """
+    z = x != y
+    print(f"{x} != {y}: {z}")
+
+def comparisons(a, b):
+    """
+    Comparing values to determine truth.
+    """
+    x = a > b
+    y = a == b
+    z = a < b
+
+    if x is True:
+        print(f"{a} > {b}: {x}")
+    if y is True:
+        print(f"{a} == {b}: {y}")
+    if z is True:
+        print(f"{a} < {b}: {z}\n")
+
+def greater_than_or_equal_to(a, b):
+    """
+    Comparing values to determine if greater than or equal to.
+    """
+    x = a <= b
+    y = a >= b
+
+    if x is True:
+        print(f"{a} <= {b}: {x}")
+    if y is True:
+        print(f"{a} >= {b}: {y}")
+
+def nested_if(x, y, z):
+    num = x
+    if num > y:
+        print(f"{num} is greater than {y}")
+        if num <= z:
+            print(f"{num} is between {y} and {z}")
+
+def if_else(num1, num2):
+    x = num1
+    if x == num2:
+        print("Yes")
+    else:
+        print("No")
+
+def the_club(age, name):
+    """
+    Code coach: Determine if a person is old enough for admittance to the club.
+    """
+    if age >= 18:
+        print(f"Welcome {name}")
+    else:
+        print("sorry")
+
+def numbers(x):
+    num = x
+    if num == 1:
+        print("One")
+    else:
+        if num == 2:
+            print("Two")
+        else:
+            if num == 3:
+                print("Three")
+            else:
+                print("Something else")
+
+def numbers2(x):
+    num = x
+    if num == 1:
+        print("One")
+    elif num == 2:
+        print("Two")
+    elif num == 3:
+        print("Three")
+    else:
+        print("Something else")
 
 
 if __name__ == "__main__":
     # Code to execute when run directly
-    congrats("Iain", "First", "Python for Beginners")    
+    congrats("Iain", "First", "Python for Beginners")
 
+    print("\nNumbers:\n")
+    numbers2(3)
+    numbers2(1)
+    numbers2(9)
+    numbers2(2)
+    input("\nHit Enter to continue...")
+
+    print("\nNumbers:\n")
+    numbers(3)
+    numbers(1)
+    numbers(9)
+    numbers(2)
+    input("\nHit Enter to continue...")
+
+    print("\nThe Club:\n")
+    the_club(24, "James")
+    input("\nHit Enter to continue...")
+
+    print("\nelse Statements:\n")
+    if_else(4, 5)
+    if_else(9, 9)
+    input("\nHit Enter to continue...")
+
+    print("\nNested if Statements:\n")
+    nested_if(12, 5, 47)
+    input("\nHit Enter to continue...")
+
+    print("\nGreater Than or Equal to? :\n")
+    greater_than_or_equal_to(7, 8)
+    greater_than_or_equal_to(9, 9.0)
+    print("Annie" > "Andy")
+    input("\nHit Enter to continue...")
+
+    print("\nComparison:\n")
+    comparisons(7, 5)
+    comparisons(10, 10)
+    input("\nHit Enter to continue...")
+
+    print("\nBooleans not equal:\n")
+    booleans_no_match(1, 1)
+    booleans_no_match("seven", "eleven")
+    booleans_no_match(2, 10)
+    input("\nHit Enter to continue...")
+
+    print("\nBooleans:\n")
+    my_boolean = True
+    print(my_boolean)
+    booleans(2, 3)
+    booleans("hello", "hello")
+    input("\nHit Enter to continue...")
+    
     print("<<<!!! End of Script !!!>>>")
