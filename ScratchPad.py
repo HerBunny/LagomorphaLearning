@@ -5,9 +5,6 @@
 def python_core():
     def control_structures():
         """
-        Boolean Logic
-        Multiple Operators & ...
-        Lists
         List Operations
         List Functions
         While Loops
@@ -113,7 +110,42 @@ def python_core():
         81.1 - Module 8 Quiz
         82 - Juice Maker
         """
-
+    def Regular_Expressions():
+        """
+        83.1 - Regular Expressions
+        83.2 - Contacts Database
+        84.1 - Simple Metacharacters
+        84.2 - Starts with Ends With
+        85.1 - Character Classes
+        85.2 - Online Shop Search
+        86.1 - More Metacharacters
+        86.2 - Authentication!
+        87.1 - Groups
+        88.1 - Special Sequences
+        88.2 - Social Media Pro
+        89.1 - Email Extraction
+        90.1 - Module 9 Quiz
+        91 - Phone Number Validator Coding Project
+        """
+    def Pythonicness_and_Packaging():
+        """
+        92.1 - The Zen of Python
+        93.1 - PEP
+        94.1 - More on Function Arg...
+        94.2 - Infinite Sum
+        95.1 - Tuple Unpacking
+        96.1 - Ternary Operator
+        96.2 - Give Me My Money
+        97.1 - More on else Statements
+        97.2 - Too Young to Ride
+        98.1 - __main__
+        99.1 - Major 3rd-Party libr...
+        100.1 - Packages
+        101.1 - Packaging for Users
+        101.2 - ???
+        102.1 Module 10 Quiz
+        103 Adding Words Coding Project
+        """
 
 ### Module Imports ###
 
@@ -129,44 +161,6 @@ def congrats(name, count, course):
 
     input("\nHit enter to continue...")
 
-def shout(word):
-    """
-    Print a word with an 
-    exclaimation mark following it.
-    """
-    print(word + "!")
-
-def print_calculations(a, b, c, d, e):
-    print(a + b)
-    print(c + d - e)
-
-def order_of_operations(a, b, c, d, e):
-    print(a * (b + c))
-    print(d / e)
-
-def exponentiation(x, y):
-    """
-    Raises x to the power of y.
-    """
-    return x**y
-
-def sqr_root(x):
-    """
-    Returns the square root of a number.
-    """
-    return (x ** (1/2))
-
-def divide_and_conquer(x, y):
-    """
-    Performs division using the two inputs,
-    then outputs the quotient and remainder.
-    """
-    q = int(x // y)
-    r = int(x % y)
-    print(f"The result of dividing {int(x)} by {int(y)} is that...")
-    print(f"{int(y)} goes into {int(x)}, {q} times.")
-    print(f"With a remainder of {r}")    
-
 def tag():
     print("     👨‍💻      🐇")
     print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
@@ -176,125 +170,6 @@ def tag():
     print("⬛⬛⬛⬜⬛⬛⬛⬜⬛⬛⬛⬜⬛")
     print("⬛⬛⬜⬜⬜⬛⬛⬛⬜⬜⬜⬛⬛")
     print("⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛")
-
-def strings():
-    print("Python is fun!")
-    print('Always look on the bright side of life')
-
-def backslash():
-    print('Brian\'s mother: He\'s not an angel. He\'s a very naughty boy!')
-
-def newlines():
-    print('One\nTwo\nThree')
-
-def multiline_text():
-    print("""this
-    is a
-    multiline
-    text""")
-
-def concatenation():
-    print("Spam" + 'eggs')
-    print("2" + "2")
-
-def string_operations():
-    print("Spam" * 3)
-    print(4 * '2')
-
-def corresponding_ops(y):
-    """
-    Variables can be used to perform corresponding operations.
-    """
-    print("Corresponding Ops:")
-    
-    x = 7
-    print(x)
-
-    print(x + y)
-    print(x)
-
-    #> 7
-    #> 47
-    #> 7
-
-    input("\nHit enter to Continue")
-
-def variable_reassignment():
-    """
-    Variables don't have a specific data type. They can be changed to other types as needed.
-    """
-    print("Variable Reassignment: ")
-
-    x = 123.456
-    print(f"x = {x}")
-
-    x = "This is a string"
-    print(f'x = {x + "!"}')
-
-    #> x = 123.456
-    #> x = This is a string!
-
-    input("\nHit enter to Continue...")
-
-def user_input():
-    """
-    The intuitively named input function, is used to get an input from the user.
-    """
-    print("User Input:")
-
-    x = input("Enter something: ")
-    print(f"You typed: {x}")
-
-    #> User Input:
-    #> You typed: [your input here]
-
-    input("\nHit enter to continue...")
-
-def user_input_2():
-    """
-    User inputs must be followed by parentheses. A prompt may be given within the parenthesis.
-    """
-    print("User input 2:")
-
-    name = input("Enter your name: ")
-    print(f"Hello {name}. Good to meet you. :)")
-
-    #> Enter your name:
-    #> Hello [your name]. Good to meet you. :)
-
-    input("\nHit enter to continue...")
-
-def str_as_int():
-    """
-    Inputs are strings by default, though they can be converted to an integer, for use in calculations.
-    """
-    print("String inputs as Integers: ")
-
-    age = int(input("Enter your age: "))
-    print(age)
-    print(int(age/2))
-    print(f"Your age is {age}")
-
-    #> [Integer you entered]
-    #> [Half of the integer value, you entered]
-    #> Your age is [Integer you entered]    
-
-    input("\nHit enter to continue...")
-
-def name_and_age():
-    """
-    Taking an input for name & age, and then using that to output a response.
-    """
-    print("Name and Age: ")
-
-    name = input("What is your name? ")
-    age = input("How old are you? ")
-
-    print(f"{name} is {age} years old.")
-
-    #> {name} is {age} years old.
-
-    input("\nHit enter to continue...")
 
 def multiple_variables():
     """
@@ -493,60 +368,132 @@ def numbers2(x):
     else:
         print("Something else")
 
+def usingAll(num_list):
+    if all([i > 10 for i in num_list]):
+        print("True")
+    else:
+        print("False")
+
+def boolean_and():
+    print(1 == 1 and 2 == 2)
+    # True
+    print(1 == 1 and 2 == 3)
+    # False
+    print(1 != 1 and 2 == 2)
+    # False
+    print(2 < 1 and 3 > 6)
+    # False
+
+def humidity(percent):
+    if percent >= 40 and percent <= 60:
+        print("norm")
+
+    input("\nHit enter to continue...\n")
+
+def boolean_or():
+    """
+    """
+    print(1 == 1 or 2 == 2)
+    # True
+    print(1 == 1 or 2 == 3)
+    # True
+    print(1 != 1 or 2 == 2)
+    # True
+    print(2 < 1 or 3 > 6)
+    # False    
+
+    input("\nHit enter to continue...\n")
+
+def boolean_not():
+    """
+    """
+    print(not 1 == 1)
+    # False
+    print(not 1 > 7)
+    # True
+
+    input("\nHit enter to continue...\n")
+
+def true_or_false():
+    print(False == False or True)
+    # True
+    print(False == (False or True))
+    # False
+    print((False == False) or True)
+    # True    
+
+    input("\nHit enter to continue...\n")
+
+def grade_check(grade):
+    if (grade >= 70 and grade <= 100):
+        print("Passed!")
+    else:
+        print("Failed")
+
+def lists():
+    """
+    """
+    str = "Hello world!"
+    print(str[6])
+
+    words = ["Hello", "world", "!"]
+    print(words[0])
+    print(words[1])
+    print(words[2])
+
+    empty_list = []
+    print(empty_list)
+
+def lists_2():
+    """
+    """
+    number = 3
+    things = ["string", 0, [1, 2, number], 4.56]
+    print(things[1])
+    print(things[2])
+    print(things[2][2]) # third element, in third element of list   
+    
+def matrices():
+    """
+    """
+    m = [
+        [1, 2, 3],
+        [4, 5, 6]
+        ]
+
+    print(m[1][2]) # Third element in second row
+
 
 if __name__ == "__main__":
     # Code to execute when run directly
     congrats("Iain", "First", "Python for Beginners")
 
-    print("\nNumbers:\n")
-    numbers2(3)
-    numbers2(1)
-    numbers2(9)
-    numbers2(2)
-    input("\nHit Enter to continue...")
+    matrices()
+    input("\nHit enter to continue...\n")
 
-    print("\nNumbers:\n")
-    numbers(3)
-    numbers(1)
-    numbers(9)
-    numbers(2)
-    input("\nHit Enter to continue...")
+    lists_2()
+    input("\nHit enter to continue...\n")
 
-    print("\nThe Club:\n")
-    the_club(24, "James")
-    input("\nHit Enter to continue...")
+    lists()
+    input("\nHit enter to continue...\n")
 
-    print("\nelse Statements:\n")
-    if_else(4, 5)
-    if_else(9, 9)
-    input("\nHit Enter to continue...")
 
-    print("\nNested if Statements:\n")
-    nested_if(12, 5, 47)
-    input("\nHit Enter to continue...")
+    grade_check(35)
+    grade_check(96)
+    grade_check(74)
+    input("\nHit enter to continue...\n")
 
-    print("\nGreater Than or Equal to? :\n")
-    greater_than_or_equal_to(7, 8)
-    greater_than_or_equal_to(9, 9.0)
-    print("Annie" > "Andy")
-    input("\nHit Enter to continue...")
+    true_or_false()
 
-    print("\nComparison:\n")
-    comparisons(7, 5)
-    comparisons(10, 10)
-    input("\nHit Enter to continue...")
+    boolean_not()
 
-    print("\nBooleans not equal:\n")
-    booleans_no_match(1, 1)
-    booleans_no_match("seven", "eleven")
-    booleans_no_match(2, 10)
-    input("\nHit Enter to continue...")
+    boolean_or()
 
-    print("\nBooleans:\n")
-    my_boolean = True
-    print(my_boolean)
-    booleans(2, 3)
-    booleans("hello", "hello")
-    input("\nHit Enter to continue...")
-    
+    humid = int(input() or 45)
+    humidity(humid)
+
+    print("\nBoolean and:\n")
+    boolean_and()
+    input("\nHit enter to continue...\n")
+
     print("<<<!!! End of Script !!!>>>")
