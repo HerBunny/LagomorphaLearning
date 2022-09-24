@@ -149,6 +149,8 @@ def python_core():
 
 ### Module Imports ###
 
+import numpy as np
+
 ### Functions ###
 
 def congrats(name, count, course):
@@ -463,37 +465,229 @@ def matrices():
 
     print(m[1][2]) # Third element in second row
 
+def my_arrays():
+    """
+    Playing with NumPy Arrays.
+    """
+    d = np.full((2,2), 9, dtype = np.float32)
+    print(d)
+    input("\nHit enter to continue...\n")
+
+    a = np.ones((3, 2))
+    print(a)
+    input("\nHit enter to continue...\n")
+
+
+    b = np.zeros((3, 4))
+    print(b)
+    input("\nHit enter to continue...\n")
+
+    c = np.random.random(3)
+    print(c)
+    input("\nHit enter to continue...\n")
+
+    d = np.full((2, 2), 12)
+    print(d)
+    input("\nHit enter to continue...\n")
+
+    my_arr = np.array([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8]
+        ])
+
+    print(my_arr)
+
+    print(my_arr[1, 2])
+
+    print(my_arr.ndim)
+
+    print(my_arr.shape)
+
+    print(my_arr.size)
+
+    print(type(my_arr))
+
+def arr_creating_a_sequence():
+    a = np.arange(0, 10, 2)
+    print(a)
+    input("\nHit enter to continue...\n")
+
+    b = np.arange(6)
+    print(b)
+    input("\nHit enter to continue...\n")
+
+    c = np.linspace(0, 10, 6)
+    print(c)
+    input("\nHit enter to continue...\n")
+
+def changing_array_size_and_shape():
+    a = np.arange(10)
+    print(a.shape)
+    input("\nHit enter to continue...\n")
+
+    print(a)
+    input("\nHit enter to continue...\n")
+
+    a.resize(2, 5)
+    print(a.shape)
+    input("\nHit enter to continue...\n")
+
+    print(a)
+    input("\nHit enter to continue...\n")
+
+    b = np.array([[1, 2, 3], [4, 5, 6]])
+    print(b)
+    input("\nHit enter to continue...\n")
+
+    print(b.reshape(3, 2))
+    input("\nHit enter to continue...\n")
+
+    print(b.shape)
+    input("\nHit enter to continue...\n")
+
+    print(b.ravel())
+    input("\nHit enter to continue...\n")
+
+    print(b.shape)
+    input("\nHit enter to continue...\n")
+
+    a = np.array([[1, 2, 3], [4, 5, 6]])
+    print(a.transpose())
+    input("\nHit enter to continue...\n")
+
+def array_slicing():
+    x = np.arange(8)
+
+    y = x[0:4]
+    print(y)
+    input("\nHit enter to continue...\n")
+
+    z = x[6:]
+    print(z)
+    input("\nHit enter to continue...\n")
+
+    print(x[:5])
+    input("\nHit enter to continue...\n")
+
+    z[1] = 100
+    print(x)
+    input("\nHit enter to continue...\n")
+
+    a = np.array([
+        [10, 11, 12, 13],
+        [20, 22, 23, 25]
+        ])
+
+    print(a[0:1, 1]) # 2nd element of first two rows
+    input("\nHit enter to continue...\n")
+
+    print(a[..., 1]) # 2nd element of each row
+    input("\nHit enter to continue...\n")
+
+    print(a[:, 3])
+    input("\nHit enter to continue...\n")
+
+def arithmetic():
+    x = np.array([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8]
+        ])
+
+    y = np.array([
+        [9, 10, 11, 12],
+        [13, 14, 15, 16]
+        ])
+
+    print(np.add(x, y))
+    input("\nHit enter to continue...\n")
+
+    print(np.remainder(y, x))
+    input("\nHit enter to continue...\n")
+
+    print(x**2)
+    input("\nHit enter to continue...\n")
+
+    print(y - x)
+    input("\nHit enter to continue...\n")
+
+    print(x < 5)
+    input("\nHit enter to continue...\n")
+
+def elementwise():
+    x = np.array([[1, 2], [3, 4]])
+    print(np.exp(x)) # Exponential
+    input("\nHit enter to continue...\n")
+    print(np.sqrt(x)) # Square root
+    input("\nHit enter to continue...\n")
+
+def array_functions():
+    x = np.array([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8]
+        ])
+
+    y = np.array([
+        [9, 10, 11, 12],
+        [13, 14, 15, 16]
+        ])
+    
+    print(x.sum(axis = 0))
+    input("\nHit enter to continue...\n")
+
+    print(np.min(x))
+    input("\nHit enter to continue...\n")
+
+    print(x.max(axis = 1))
+    input("\nHit enter to continue...\n")
+
+    print(np.cumsum(y))
+    input("\nHit enter to continue...\n")
+
+    print(np.corrcoef(y))
+    input("\nHit enter to continue...\n")
+
+    print(y.std())
+    input("\nHit enter to continue...\n")
+
+def broadcasting():
+    two_d = np.array([
+        [1, 2, 3, 4],
+        [5, 6, 7, 8]
+        ])
+
+    one_d = np.array([[10]])
+
+    three_d = np.ones((3, 2))
+
+    print(np.add(two_d, one_d))
+    input("\nHit enter to continue...\n")
+
+    print(np.add(one_d, three_d))
+    input("\nHit enter to continue...\n")
+
+def dejavu():
+    """
+    Code coach to find if you've typed a character more than once in an input string.
+    """
+    str = input("Type something: ")
+    print(str)
+    deja = False
+
+    for char in str:
+        x = char
+        if str.count(x) > 1:
+            deja = True
+
+    if deja == True:
+        print("Deja Vu")
+    else:
+        print("Unique")
+               
 
 if __name__ == "__main__":
     # Code to execute when run directly
     congrats("Iain", "First", "Python for Beginners")
 
-    matrices()
-    input("\nHit enter to continue...\n")
-
-    lists_2()
-    input("\nHit enter to continue...\n")
-
-    lists()
-    input("\nHit enter to continue...\n")
-
-
-    grade_check(35)
-    grade_check(96)
-    grade_check(74)
-    input("\nHit enter to continue...\n")
-
-    true_or_false()
-
-    boolean_not()
-
-    boolean_or()
-
-    humid = int(input() or 45)
-    humidity(humid)
-
-    print("\nBoolean and:\n")
-    boolean_and()
-    input("\nHit enter to continue...\n")
+    dejavu()
 
     print("<<<!!! End of Script !!!>>>")
